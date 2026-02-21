@@ -6,13 +6,51 @@
     <title>Job Application Tracker</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/1302209f2ad.js" crossorigin="anonymous"></script>
+    <style>
+         *{
+           font-family: "Geist", sans-serif;
+         }
+    </style>
 </head>
-<body>
+<body class="geist max-w-[1110px] mx-auto my-10 lg:my-[60px]">
      <header>
-        <h2>Job Application Tracker</h2>
-        <div>
-            
+        <h2 class="text-[#002C5C] font-bold text-2xl mb-3 text-center md:text-start lg:text-start md:mb-4 lg:mb-5 md:text-2xl lg:text-2xl">Job Application Tracker</h2>
+        <div class="grid grid-cols-3 gap-2 md:gap-4 lg:gap-4">
+            <div class="border-[#f1f2f4] rounded-lg shadow-lg p-5">
+                <h4 class="font-medium text-sm text-[#323B49] mb-2">Total</h4>
+                <h3 class="text-[#002C5C] font-bold text-2xl">8</h3>
+            </div>
+            <div class="border-[#f1f2f4] rounded-lg shadow-lg p-5">
+                <h4 class="font-medium text-sm text-[#323B49] mb-2">Interview</h4>
+                <h3 class="text-[#10B981] font-bold text-2xl">0</h3>
+            </div>
+               
+            <div class="border-[#f1f2f4] rounded-lg shadow-lg p-5">
+                <h4 class="font-medium text-sm text-[#323B49] mb-2">Rejected</h4>
+                <h3 class="text-red-400 font-bold text-2xl">0</h3>
+            </div>
         </div>
+        <hr class="text-[#e6e7e9] my-7">
      </header>
+     <main>
+        <section>
+            <div class="flex justify-between">
+                <h2 class="text-[#002C5C] font-semibold text-xl mb-3 md:mb-4 lg:mb-6">Available Jobs</h2>
+                <p class="text-[#64748B] font-medium">8 jobs</p>
+            </div>
+            <div>
+                <button class="btn bg-[#3B82F6] text-white font-semibold text-[12px] shadow-sm px-8 py-[10px] rounded">All</button>
+                <button class="btn border-[#f1f2f4] text-[#64748B] font-medium text-[12px] shadow-sm px-3 py-2 rounded">Interview</button>
+                <button class="btn border-[#f1f2f4] text-[#64748B] font-medium text-[12px] shadow-sm px-3 py-2 rounded"></button>
+                <button class="btn border-[#f1f2f4] text-[#64748B] font-medium text-[12px] shadow-sm px-3 py-2 rounded">Interview</button>
+            </div>
+        </section>
+     </main>
 </body>
 </html>
