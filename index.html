@@ -28,7 +28,7 @@
         <div class="grid grid-cols-3 gap-2 md:gap-4 lg:gap-4">
             <div class="border-[#f1f2f4] rounded-lg shadow-lg p-5">
                 <h3 class="font-medium text-sm text-[#323B49] mb-2">Total</h4>
-                <h4 id="total-job" class="font-bold text-2xl text-[#002C5C]">8</h2>
+                <h4 id="jobs" id="total-job" class="font-bold text-2xl text-[#002C5C]">8</h2>
             </div>
             <div class="border-[#f1f2f4] rounded-lg shadow-lg p-5">
                 <h3 class="font-medium text-sm text-[#323B49] mb-2">Interview</h4>
@@ -84,9 +84,9 @@
                             <p class="text-sm text-[#323B49] mb-3">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                             <div class="card-actions">
 
-                                <button id="interview1" class="btn interview font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button> 
+                                <button id="interview1" onclick="interviewButton(this)" class="btn interview font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button> 
 
-                                <button id="rejected1" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="rejected1" onclick="rejectedButton(this)" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                                    
                             </div>
                         </div>
@@ -115,8 +115,8 @@
                             </h3>
                             <p class="text-sm text-[#323B49] mb-3">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                             <div class="card-actions">
-                                <button id="interview2" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button id="rejected2" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview2" onclick="interviewButton(this)" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected2" onclick="rejectedButton(this)" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
@@ -144,8 +144,8 @@
                             </h3>
                             <p class="text-sm text-[#323B49] mb-3">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                             <div class="card-actions">
-                                <button id="interview3" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button id="rejected3" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview3" onclick="interviewButton(this)" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected3" onclick="rejectedButton(this)" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
@@ -170,8 +170,8 @@
                             <h3 id="not-applied4" class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">NOT APPLIED</h3>
                             <p class="text-sm text-[#323B49] mb-3">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                             <div class="card-actions">
-                                <button id="interview4" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button id="rejected4" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview4" onclick="interviewButton(this)" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected4" onclick="rejectedButton(this)" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
@@ -196,8 +196,8 @@
                             <h3 id="not-applied5" class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">NOT APPLIED</h3>
                             <p class="text-sm text-[#323B49] mb-3">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                             <div class="card-actions">
-                                <button id="interview5" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button id="rejected5" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview5" onclick="interviewButton(this)" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected5" onclick="rejectedButton(this)" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
@@ -224,8 +224,8 @@
                             </h3>
                             <p class="text-sm text-[#323B49] mb-3">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                             <div class="card-actions">
-                                <button id="interview6" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button id="rejected6" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview6" onclick="interviewButton(this)" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected6" onclick="rejectedButton(this)" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
@@ -252,8 +252,8 @@
                             </h3>
                             <p class="text-sm text-[#323B49] mb-3">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                             <div class="card-actions">
-                                <button id="interview7" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button id="rejected7" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview7" onclick="interviewButton(this)" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected7" onclick="rejectedButton(this)" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
@@ -280,8 +280,8 @@
                             </h3>
                             <p class="text-sm text-[#323B49] mb-3">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                             <div class="card-actions">
-                                <button id="interview8" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button id="rejected8" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview8" onclick="interviewButton(this)" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected8" onclick="rejectedButton(this)" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
