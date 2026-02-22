@@ -28,15 +28,15 @@
         <div class="grid grid-cols-3 gap-2 md:gap-4 lg:gap-4">
             <div class="border-[#f1f2f4] rounded-lg shadow-lg p-5">
                 <h3 class="font-medium text-sm text-[#323B49] mb-2">Total</h4>
-                <h4 class="font-bold text-2xl text-[#002C5C]">8</h2>
+                <h4 id="total-job" class="font-bold text-2xl text-[#002C5C]">8</h2>
             </div>
             <div class="border-[#f1f2f4] rounded-lg shadow-lg p-5">
                 <h3 class="font-medium text-sm text-[#323B49] mb-2">Interview</h4>
-                <h4 class="font-bold text-2xl text-[#10B981]">0</h2>
+                <h4 id="ineterview-count" class="font-bold text-2xl text-[#10B981]">0</h2>
             </div>
             <div class="border-[#f1f2f4] rounded-lg shadow-lg p-5">
                 <h3 class="font-medium text-sm text-[#323B49] mb-2">Rejected</h4>
-                <h4 class="font-bold text-2xl text-[#EF4444]">0</h2>
+                <h4 id="rejected-count" class="font-bold text-2xl text-[#EF4444]">0</h2>
             </div>
         </div>
         <hr class="text-[#e6e7e9] my-7">
@@ -49,16 +49,16 @@
                 <p class="font-medium text-[#64748B]">8 jobs</p>
             </div>
             <div class="flex gap-2 items-center mb-4">
-                <button class="btn bg-[#3B82F6] font-medium text-white px-8 py-[10px] rounded">All</button>
-                <button class="btn border-[#f1f2f4] font-medium text-[#64748B] shadow-sm px-3 py-2 rounded">Interview</button>
-                <button class="btn border-[#f1f2f4] font-medium text-[#64748B] shadow-sm px-3 py-2 rounded">Rejected</button>
+                <button id="all-btn" class="btn bg-[#3B82F6] font-medium text-white px-8 py-[10px] rounded">All</button>
+                <button id="interview-btn" class="btn border-[#f1f2f4] font-medium text-[#64748B] shadow-sm px-3 py-2 rounded">Interview</button>
+                <button id="rejected-btn" class="btn border-[#f1f2f4] font-medium text-[#64748B] shadow-sm px-3 py-2 rounded">Rejected</button>
             </div>
         </section>
 
         <!-- card section -->
         <section>
-            <div>
-                <div class="space-y-6">
+            <div id="card-container">
+                <div id="cards" class="space-y-6">
 
                     <!-- card 1 -->
                     <div class="card bg-base-100 shadow-sm">
@@ -77,16 +77,16 @@
                                 <p class="text-sm text-[#64748B]">• Full-time</p>
                                 <p class="text-sm text-[#64748B]">• $130,000 - $175,000</p>
                             </div>
-                            <h3 class="notApplied font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">
+                            <h3 id="not-applied1" class="notApplied font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">
                                 NOT
                                 APPLIED
                             </h3>
                             <p class="text-sm text-[#323B49] mb-3">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                             <div class="card-actions">
 
-                                <button class="btn interview font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button> 
+                                <button id="interview1" class="btn interview font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button> 
 
-                                <button class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="rejected1" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                                    
                             </div>
                         </div>
@@ -109,14 +109,14 @@
                                 <p class="text-sm text-[#64748B]">• Part-time</p>
                                 <p class="text-sm text-[#64748B]">• $80,000 - $120,000</p>
                             </div>
-                            <h3 class="notApplied font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">
+                            <h3 id="not-applied2" class="notApplied font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">
                                 NOT
                                 APPLIED
                             </h3>
                             <p class="text-sm text-[#323B49] mb-3">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                             <div class="card-actions">
-                                <button  class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview2" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected2" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
@@ -138,14 +138,14 @@
                                 <p class="text-sm text-[#64748B]">• Full-time</p>
                                 <p class="text-sm text-[#64748B]">• $125,000 - $165,000</p>
                             </div>
-                            <h3 class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">
+                            <h3 id="not-applied3" class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">
                                 NOT
                                 APPLIED
                             </h3>
                             <p class="text-sm text-[#323B49] mb-3">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                             <div class="card-actions">
-                                <button class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview3" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected3" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
@@ -167,11 +167,11 @@
                                 <p class="text-sm text-[#64748B]">• Contract</p>
                                 <p class="text-sm text-[#64748B]">• $150/hour</p>
                             </div>
-                            <h3 class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">NOT APPLIED</h3>
+                            <h3 id="not-applied4" class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">NOT APPLIED</h3>
                             <p class="text-sm text-[#323B49] mb-3">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                             <div class="card-actions">
-                                <button class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview4" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected4" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
@@ -193,11 +193,11 @@
                                 <p class="text-sm text-[#64748B]">• Full-time</p>
                                 <p class="text-sm text-[#64748B]">• $110,000 - $150,000</p>
                             </div>
-                            <h3 class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">NOT APPLIED</h3>
+                            <h3 id="not-applied5" class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">NOT APPLIED</h3>
                             <p class="text-sm text-[#323B49] mb-3">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                             <div class="card-actions">
-                                <button class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview5" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected5" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
@@ -219,13 +219,13 @@
                                 <p class="text-sm text-[#64748B]">• Full-time</p>
                                 <p class="text-sm text-[#64748B]">• $130,000 - $170,00</p>
                             </div>
-                            <h3 class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">NOT
+                            <h3 id="not-applied6" class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">NOT
                                 APPLIED
                             </h3>
                             <p class="text-sm text-[#323B49] mb-3">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                             <div class="card-actions">
-                                <button class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview6" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected6" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
@@ -247,13 +247,13 @@
                                 <p class="text-sm text-[#64748B]">• Full-time</p>
                                 <p class="text-sm text-[#64748B]">• $120,000 - $160,000</p>
                             </div>
-                            <h3 class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">NOT
+                            <h3 id="not-applied7" class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">NOT
                                 APPLIED
                             </h3>
                             <p class="text-sm text-[#323B49] mb-3">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                             <div class="card-actions">
-                                <button class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview7" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected7" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
@@ -275,13 +275,13 @@
                                 <p class="text-sm text-[#64748B]">• Full-time</p>
                                 <p class="text-sm text-[#64748B]">• $130,000 - $175,000</p>
                             </div>
-                            <h3 class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">NOT
+                            <h3 id="not-applied8" class="font-medium text-sm text-[#002C5C] rounded bg-[#eef4ff] px-3 py-2 w-fit mb-2">NOT
                                 APPLIED
                             </h3>
                             <p class="text-sm text-[#323B49] mb-3">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                             <div class="card-actions">
-                                <button class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
-                                <button class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
+                                <button id="interview8" class="btn font-semibold text-sm text-[#10B981] border-[#10B981] px-3 py-2 rounded">Interview</button>
+                                <button id="rejected8" class="btn rejected font-semibold text-sm text-[#EF4444] border-[#EF4444] px-3 py-2 rounded">Rejected</button>
                             </div>
                         </div>
                     </div>
@@ -290,7 +290,7 @@
                 <!-- no data found section -->
                 <div id="no-jobs" class="card bg-base-100 py-10 shadow-sm hidden">
                     <figure class="px-10 pt-10">
-                        <img src="Image/jobs.png" alt="" class="rounded-xl mb-5" />
+                        <img src="Image/jobs.png" alt="" class="rounded-xl mb-5"/>
                     </figure>
                     <div class="card-body items-center text-center">
                         <h3 class="font-bold text-2xl text-[#002C5C]">No jobs available</h3>
@@ -301,9 +301,6 @@
         </section>
     </main>
 
-    <!-- <script src="js/all.js"></script>
-    <script src="js/interview.js"></script>
-    <script src="js/rejected.js"></script>
-    <script src="js/common-function.js"></script> -->
+    <script src="./style.js/all.js"></script>
 </body>
 </html>
